@@ -1,0 +1,1054 @@
+{
+	"info": {
+		"_postman_id": "663f90ab-27a2-4710-ac02-baafdbf97a3e",
+		"name": "kubernetes API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "cluster",
+			"item": [
+				{
+					"name": "namespace",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/overview/{{namespace}}?filterBy=&itemsPerPage=10&name=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"overview",
+								"{{namespace}}"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 命名空间"
+					},
+					"response": []
+				},
+				{
+					"name": "node",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/node?filterBy=&itemsPerPage=10&name=&namespace=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"node"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "namespace",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 节点"
+					},
+					"response": []
+				},
+				{
+					"name": "persistentvolume",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/persistentvolume?filterBy=&itemsPerPage=10&name=&namespace=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"persistentvolume"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "namespace",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 持久化存储卷"
+					},
+					"response": []
+				},
+				{
+					"name": "role",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/rbac/role?filterBy=&itemsPerPage=10&name=&namespace=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rbac",
+								"role"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "namespace",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 角色"
+					},
+					"response": []
+				},
+				{
+					"name": "storageclass",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/storageclass?filterBy=&itemsPerPage=10&name=&namespace=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"storageclass"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "namespace",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 角色"
+					},
+					"response": []
+				}
+			],
+			"description": "Kubernetes 集群",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "82df3541-45c0-4bb0-85c1-5095ccf3e8e7",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "d8fd51a9-57e5-4a8e-82f0-0c45ce82319a",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "overview in namespace",
+			"item": [
+				{
+					"name": "overview",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/overview/{{namespace}}?filterBy=&itemsPerPage=10&name=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"overview",
+								"{{namespace}}"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 命名空间概况"
+					},
+					"response": []
+				},
+				{
+					"name": "workload",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/workload/{{namespace}}?filterBy=&itemsPerPage=10&name=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"workload",
+								"{{namespace}}"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 命名空间工作负载"
+					},
+					"response": []
+				},
+				{
+					"name": "cronjob",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/cronjob/{{namespace}}?filterBy=&itemsPerPage=10&name=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cronjob",
+								"{{namespace}}"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 命名空间定时任务"
+					},
+					"response": []
+				},
+				{
+					"name": "daemonset",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/daemonset/{{namespace}}?filterBy=&itemsPerPage=10&name=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"daemonset",
+								"{{namespace}}"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 命名空间守护进程"
+					},
+					"response": []
+				},
+				{
+					"name": "deployment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/deployment/{{namespace}}?filterBy=&itemsPerPage=10&name=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"deployment",
+								"{{namespace}}"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 命名空间部署"
+					},
+					"response": []
+				},
+				{
+					"name": "job",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/job/{{namespace}}?filterBy=&itemsPerPage=10&name=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"{{namespace}}"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 命名空间任务"
+					},
+					"response": []
+				},
+				{
+					"name": "pod",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/pod/{{namespace}}?filterBy=&itemsPerPage=10&name=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pod",
+								"{{namespace}}"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 命名空间容器组"
+					},
+					"response": []
+				},
+				{
+					"name": "replicaset",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/replicaset/{{namespace}}?filterBy=&itemsPerPage=10&name=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"replicaset",
+								"{{namespace}}"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 命名空间副本集"
+					},
+					"response": []
+				},
+				{
+					"name": "replicationcontroller",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/replicationcontroller/{{namespace}}?filterBy=&itemsPerPage=10&name=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"replicationcontroller",
+								"{{namespace}}"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 命名空间副本控制器"
+					},
+					"response": []
+				},
+				{
+					"name": "statefulset",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/statefulset/{{namespace}}?filterBy=&itemsPerPage=10&name=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"statefulset",
+								"{{namespace}}"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 命名空间有状态副本集"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "discovery",
+			"item": [
+				{
+					"name": "discovery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/discovery/{{namespace}}?filterBy=&itemsPerPage=10&name=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"discovery",
+								"{{namespace}}"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 命名空间服务发现与负载均衡"
+					},
+					"response": []
+				},
+				{
+					"name": "ingress",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/ingress/{{namespace}}?filterBy=&itemsPerPage=10&name=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"ingress",
+								"{{namespace}}"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 命名空间访问权"
+					},
+					"response": []
+				},
+				{
+					"name": "service",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/service/{{namespace}}?filterBy=&itemsPerPage=10&name=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"service",
+								"{{namespace}}"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 命名空间服务"
+					},
+					"response": []
+				}
+			],
+			"description": "Kubernetes 服务发现与负载均衡",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "config",
+			"item": [
+				{
+					"name": "config",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/config/{{namespace}}?filterBy=&itemsPerPage=10&name=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"config",
+								"{{namespace}}"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 命名空间配置与存储"
+					},
+					"response": []
+				},
+				{
+					"name": "configmap",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/configmap/{{namespace}}?filterBy=&itemsPerPage=10&name=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"configmap",
+								"{{namespace}}"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 命名空间配置字典"
+					},
+					"response": []
+				},
+				{
+					"name": "persistentvolumeclaim",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/persistentvolumeclaim/{{namespace}}?filterBy=&itemsPerPage=10&name=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"persistentvolumeclaim",
+								"{{namespace}}"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 命名空间持久化存储卷声明"
+					},
+					"response": []
+				},
+				{
+					"name": "secret",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{k8sDomain}}/api/v1/secret/{{namespace}}?filterBy=&itemsPerPage=10&name=&page=1&sortBy=d,creationTimestamp",
+							"host": [
+								"{{k8sDomain}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"secret",
+								"{{namespace}}"
+							],
+							"query": [
+								{
+									"key": "filterBy",
+									"value": ""
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "sortBy",
+									"value": "d,creationTimestamp"
+								}
+							]
+						},
+						"description": "k8s 命名空间保密字典"
+					},
+					"response": []
+				}
+			],
+			"description": "Kubernetes 配置与存储",
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f9c2ac00-501e-48d6-a7fa-7e96d95dc2f0",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "24cbfd71-0b84-44d1-a447-6246495670fc",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "5be33253-1ff3-4a7d-b41d-1822c85b9d36",
+			"key": "k8sDomain",
+			"value": "http://dashboard.172.16.101.13.nip.io",
+			"type": "string"
+		},
+		{
+			"id": "e88cdb70-1ad2-404e-8738-82eb4f7035d5",
+			"key": "namespace",
+			"value": "develop",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
